@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Farm Memory Agent</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Header -->
+        <header class="header">
+            <div>
+                <h1>🌱 Farm Memory Agent</h1>
+                <p>Your farm remembers. Your decisions improve.</p>
+            </div>
+
+            <div class="status">
+                <span class="status-dot"></span>
+                Memory Active
+            </div>
+        </header>
+
+
+        <!-- Farm Information -->
+        <section class="farm-card">
+
+            <div class="farm-title">
+                <span>🌾</span>
+                <div>
+                    <h2>My Farm</h2>
+                    <p>Personalized farm context</p>
+                </div>
+            </div>
+
+            <div class="farm-details">
+
+                <div class="detail">
+                    <span>📍</span>
+                    <div>
+                        <small>Location</small>
+                        <strong>Hyderabad, Telangana</strong>
+                    </div>
+                </div>
+
+                <div class="detail">
+                    <span>🌱</span>
+                    <div>
+                        <small>Current Crop</small>
+                        <strong>Tomato</strong>
+                    </div>
+                </div>
+
+                <div class="detail">
+                    <span>📐</span>
+                    <div>
+                        <small>Farm Size</small>
+                        <strong>3 Acres</strong>
+                    </div>
+                </div>
+
+                <div class="detail">
+                    <span>💧</span>
+                    <div>
+                        <small>Irrigation</small>
+                        <strong>Drip Irrigation</strong>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Chat -->
+        <main class="chat-container">
+
+            <div class="welcome-message">
+
+                <div class="agent-icon">
+                    🌱
+                </div>
+
+                <div class="message agent-message">
+
+                    <strong>Farm Memory Agent</strong>
+
+                    <p>
+                        Hi! I'm your Farm Memory Agent.
+                        Tell me what's happening on your farm,
+                        and I'll use your previous farm experiences
+                        to personalize my response.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Messages appear here -->
+            <div id="chatMessages"></div>
+
+        </main>
+
+
+        <!-- Input Area -->
+        <section class="input-section">
+
+            <div class="input-container">
+
+                <textarea
+                    id="messageInput"
+                    placeholder="Tell me what's happening on your farm..."
+                    rows="2"
+                ></textarea>
+
+                <button id="sendButton">
+                    <span>Ask Agent</span>
+                    ➤
+                </button>
+
+            </div>
+
+            <div class="input-hint">
+                💡 The agent remembers previous problems, actions and outcomes.
+            </div>
+
+        </section>
+
+
+        <!-- Event Recording -->
+        <section class="event-section">
+
+            <div class="event-header">
+                <div>
+                    <h3>🧠 Teach the Agent</h3>
+                    <p>
+                        Record what happened after you took an action.
+                    </p>
+                </div>
+            </div>
+
+            <textarea
+                id="eventInput"
+                placeholder="Example: I reduced irrigation after the soil became waterlogged and the leaves became greener after three days."
+                rows="3"
+            ></textarea>
+
+            <button id="eventButton">
+                💾 Save Farm Experience
+            </button>
+
+            <p id="eventStatus"></p>
+
+        </section>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
